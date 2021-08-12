@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended : false}));router(app);
 
 app.use(router);
 
-app.use('/app', express.static('public'));
+app.use('/app', express.static('src'));
 
 app.listen(3000);
 console.log('La aplicación está escuchando en http://localhost:3000');
