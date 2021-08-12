@@ -1,3 +1,7 @@
 .DS_Store
 node_modules
+<<<<<<< HEAD
 /dist
+=======
+/dist
+>>>>>>> db4900d5954b20bdeb21b98d9e6d7fbaf7b1ee3f

@@ -22,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/MiriamNM/Eight-queens-puzzle/issues"
   },
-  "homepage": "https://github.com/MiriamNM/Eight-queens-puzzle#readme"
+  "homepage": "https://github.com/MiriamNM/Eight-queens-puzzle#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.0",
+    "mongoose": "^5.13.7"
+  }
 }
