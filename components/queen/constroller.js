@@ -1,20 +1,20 @@
 const store = require('./store');
 
-function addQueen(queen) {
-    if (!queen) {
+function addSolutionQueens(solutionQueens) {
+    if (!solutionQueens) {
         return Promise.reject('Invalid queen');
     }
-    const theQueen = {
-        queen,
+    const theSolutionQueen = {
+        solutionQueens,
     };
-    return store.add(theQueen);
+    return store.add(theSolutionQueen);
 }
 
-function getQueen() {
+function getSolutionQueens() {
     return store.list();
 }
 
 module.exports = {
-    addQueen,
-    getQueen,
+    addSolutionQueens,
+    getSolutionQueens,
 }
