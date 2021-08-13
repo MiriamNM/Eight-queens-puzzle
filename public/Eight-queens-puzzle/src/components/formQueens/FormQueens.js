@@ -1,3 +1,4 @@
+import GetSolutionQueens from '../../lib/GetSolutionQueens'
 import './formQueens.css';
 
 const FormQueens = () => {
@@ -7,7 +8,7 @@ const FormQueens = () => {
                 <label>
                     <input type='number' className='container-form__input' />
                 </label>
-                <button className='container-form__button'>Resolve</button>
+                <button className='container-form__button' onClick={GetSolutionQueens}>Resolve</button>
             </form>
         </>
     )

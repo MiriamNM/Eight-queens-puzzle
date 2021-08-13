@@ -13,3 +13,8 @@ In the INSTRUCTIONS.md file are the instructions to see and use this application
 
 ## Improvements
 - To complement MongoDB Atlas, Mongoose, Express and Insomnia were used.
+
+## Next steps
+- Finish the algorithm of the 8 queens puzzle.
+- Store algorithm solutions in MongoDB.
+- Project the solutions in the part of the results on the website.

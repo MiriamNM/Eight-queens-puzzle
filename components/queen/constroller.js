@@ -2,7 +2,7 @@ const store = require('./store');
 
 function addSolutionQueens(solutionQueens) {
     if (!solutionQueens) {
-        return Promise.reject('Invalid queen');
+        return Promise.reject('Invalid solution queen');
     }
     const theSolutionQueen = {
         solutionQueens,
