@@ -22,7 +22,8 @@ const GetSolutionQueens = ({data}) => {
                             <p>{result.solutionQueens}</p>
                         </div>
                     )
-                    })}
+                })
+			}
 		</div>
 	)
 }
