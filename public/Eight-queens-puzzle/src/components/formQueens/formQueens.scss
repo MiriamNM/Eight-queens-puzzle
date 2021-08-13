@@ -1,0 +1,31 @@
+.container-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .container-form__input {
+        margin-left: 34%;
+        border: solid #2E110D;
+        border-radius: 10px 10px 10px 10px;
+        width: 30%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        font-family: 'Lato';
+        font-size: 1em;
+        font-weight: bold;
+        color: #2E110D;
+        text-align: center;
+    }
+    .container-form__button {
+        background-color: white;
+        margin-top: 1.5%;
+        margin-left: 43%;
+        margin-right: 43%;
+        padding-top: 0.6%;
+        padding-bottom: 0.6%;
+        border: solid #2E110D;
+        border-radius: 10px 10px 10px 10px;
+        font-family: 'Lato';
+        font-weight: bold;
+        color: #2E110D;
+    }
+}

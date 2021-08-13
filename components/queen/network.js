@@ -1,11 +1,10 @@
 const express = require('express');
 const response = require('../../network/response');
 const controller = require('./constroller');
-
 const router = express.Router();
 
 router.post('/', (req, res) => {
-    controller.addQueen(req.body.queen)
+    controller.addSolutionQueens(req.body.solutionQueens)
         .then((data)=>{
             response.success(req, res, data, 201);
         })
@@ -15,9 +14,9 @@ router.post('/', (req, res) => {
 })
 
 router.get('/', (req, res) => {
-    controller.getQueen()
-        .then(queensList => {
-            response.success(req, res, queensList, 200);
+    controller.getSolutionQueens()
+        .then(solutionQueensList => {
+            response.success(req, res, solutionQueensList, 200);
         })
         .catch(e => {
             response.error(req, res, 'Unexpected Error', 500, e)

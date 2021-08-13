@@ -1,8 +1,8 @@
 const express = require('express');
-const queen = require('../components/queen/network');
+const solutionQueens = require('../components/queen/network');
 
 const routes = function (server) {
-    server.use('/queen', queen);
+    server.use('/solutionQueens', solutionQueens);
 }
 
 module.exports = routes;

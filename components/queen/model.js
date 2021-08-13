@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const mySchema = new Schema({
-    queen: {
-        type: String,
+    solutionQueens: {
+        type: Array,
         required: true,
     },
 });
 
-const model = mongoose.model('Queen', mySchema);
+const model = mongoose.model('SolutionQueens', mySchema);
 
 module.exports = model;

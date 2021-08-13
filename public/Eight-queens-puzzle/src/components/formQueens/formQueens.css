@@ -1,0 +1,41 @@
+.container-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-form .container-form__input {
+  margin-left: 34%;
+  border: solid #2E110D;
+  border-radius: 10px 10px 10px 10px;
+  width: 30%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-family: 'Lato';
+  font-size: 1em;
+  font-weight: bold;
+  color: #2E110D;
+  text-align: center;
+}
+
+.container-form .container-form__button {
+  background-color: white;
+  margin-top: 1.5%;
+  margin-left: 43%;
+  margin-right: 43%;
+  padding-top: 0.6%;
+  padding-bottom: 0.6%;
+  border: solid #2E110D;
+  border-radius: 10px 10px 10px 10px;
+  font-family: 'Lato';
+  font-weight: bold;
+  color: #2E110D;
+}
+/*# sourceMappingURL=formQueens.css.map */

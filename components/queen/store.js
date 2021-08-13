@@ -1,15 +1,15 @@
 const Model = require('./model');
 
-function addQueen(queen) {
-    const myQueen = new Model(queen);
-    return myQueen.save();
+function addSolutionQueen(solutionQueens) {
+    const theSolutionQueens = new Model(solutionQueens);
+    return theSolutionQueens.save();
 }
 
-function getQueen() {
+function getSolutionQueen() {
     return Model.find();
 }
 
 module.exports = {
-    add: addQueen,
-    list: getQueen,
+    add: addSolutionQueen,
+    list: getSolutionQueen,
 }
