@@ -1,16 +1,28 @@
 import React, { useEffect, useState } from "react";
+ import FerchGetPost from "./db";
 
-const GetSolutionQueens = ({data}) => {
-	console.log(data)
-	const [solutionQueen, setSolutionQueen] = useState();
-	const GetsolutionQueens = async()=> {
-		let url = 'http://localhost:4000/solutionQueens';
-		let getFetchData = await fetch(url).then((result) => result.json());
-		setSolutionQueen(getFetchData);
+const GetSolutionQueens = () => {
+	
+	const [solutionQueen, setSolutionQueen] = useState([]);
+
+	const GetsolutionQueens = async ()=> {
+		await FerchGetPost()
+			.then((data) => {
+				setSolutionQueen(data)
+			});
+		
+	// fetch.post('http://localhost:8000/solutionQueens')
+	// 	.then(res => {
+	// 		console.log(res);
+	// 		console.log(res.data);
+	// 		const solutions = res.data;
+	// 		setSolutionQueen(solutions);
+	// 	})
 	}
 	useEffect(() => {
 		GetsolutionQueens();
-	}, []);
+	});
+	console.log(solutionQueen);
 
     return(
 		<div>

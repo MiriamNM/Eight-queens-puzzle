@@ -9,11 +9,12 @@ db(`mongodb+srv://${config.db_user}:${config.db_password}@${config.db_host}/${co
 
 const app = express();
 app.use(express.json());
-app.use(express.urlencoded({extended : false}));router(app);
+app.use(express.urlencoded({extended : false}));
+router(app);
 
 app.use(router);
 
 app.use('/app', express.static('src'));
 
-app.listen(4000);
-console.log('La aplicación está escuchando en http://localhost:4000');
+app.listen(8000);
+console.log('La aplicación está escuchando en http://localhost:3000');
