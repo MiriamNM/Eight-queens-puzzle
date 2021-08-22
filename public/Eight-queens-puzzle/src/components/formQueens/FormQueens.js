@@ -6,7 +6,7 @@ const FormQueens = () => {
         <>
             <form className='container-form'>
                 <label>
-                    <input type='number' className='container-form__input' />
+                    <input type='number' className='container-form__input' id='id-container-form__input'/>
                 </label>
                 <button className='container-form__button' onClick={GetSolutionQueens}>Resolve</button>
             </form>

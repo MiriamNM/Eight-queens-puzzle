@@ -1,22 +1,18 @@
 const BASEURL = 'http://localhost:8000/solutionQueens';
 
-const FerchGetPost = () => {
-    // let data = {solutionQueens: []};
+const FetchFunction = () => {
     return fetch(BASEURL, {
         method: 'POST',
         mode: 'no-cors',
-        body: JSON.stringify({
-            query: `
-            EigthQueensPuzzle{
-                id: '',
-                solutionQueens: [],
-                v: ,
-            }
-            `
-        }),
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({query:`
+        EigthQueensPuzzle{
+            solutionqueens
+        }
+        `}),
     })
-    .then((res) => res.json())
-    .then(response => console.log('Success:', response))
-    .catch(e => console.log("ocurrio un error", e))
+    .then((res) => res.json()).catch(e => console.log("ocurrio un error", e))
 }
-export default FerchGetPost;
+export default FetchFunction;

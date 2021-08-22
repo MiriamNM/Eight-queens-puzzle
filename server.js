@@ -4,6 +4,7 @@ const { config } = require('./config');
 const db = require('./db');
 
 const router = require('./network/routes');
+const cors = require('cors')
 
 db(`mongodb+srv://${config.db_user}:${config.db_password}@${config.db_host}/${config.db_name}?retryWrites=true&w=majority`);
 
@@ -11,6 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended : false}));
 router(app);
+app.use(cors())
 
 app.use(router);
 
