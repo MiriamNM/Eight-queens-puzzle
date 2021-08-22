@@ -1,18 +1,7 @@
 // import react from 'react';
 
 const FunctionEigthQueens = (n) => {
-    /*Restrictions
-    One queen per grid
-    One queen per row
-    One queen per diagonal
-    # row + #column === c / queen && queens (j) + j == in 2 different indices of j.
-    # row - #column === c / queen && queens (j) - j == in 2 different indices of j.
-    The queens are on the same ascending diagonal from left to right.
-    The queens are on the same downward diagonal.
-    Values of queens (j) + j are all different for j
-    Values of queens (j) - j are all different for j
-    */
-    
+    //playSite put the rows and columns
     let playSite = function (resultArr, arr) {
         for (let i = 0; i < resultArr.length; i++) {
             if (resultArr[i][0] === arr[0] || resultArr[i][1] === arr[1]) return false;
@@ -21,7 +10,8 @@ const FunctionEigthQueens = (n) => {
         return true;
     };
 
-    let buildRes = function (arr) {
+    //buildPlay fill space in the rows.
+    let buildPlay = function (arr) {
         let resultArr = [];
         for (let i = 0; i < arr.length; i++) {
             resultArr[i] = '';
@@ -32,6 +22,7 @@ const FunctionEigthQueens = (n) => {
         return resultArr;
       };
     
+    //recursiveFunction It is the recursive function that links rows, columns and position of queens or spaces.
     const recursiveFunction = (resultArr, arr, n, index) => {
         for (let i = index; i < n; i++) {
             if (arr.length !== i) return;
@@ -39,13 +30,14 @@ const FunctionEigthQueens = (n) => {
                     if (playSite(arr, [i, j])) {
                         arr.push([i, j]);
                         recursiveFunction(resultArr, arr, n, index + 1);
-                        if (arr.length === n) resultArr.push(buildRes(arr));
+                        if (arr.length === n) resultArr.push(buildPlay(arr));
                         arr.pop();
                     }
             }
         }
     }
-    
+
+    //solveNQueens join all.
     const solveNQueens = function(n) {
         let res = [];
         const index = 0;
