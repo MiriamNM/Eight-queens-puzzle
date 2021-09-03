@@ -45,8 +45,10 @@ const FunctionEigthQueens = (n) => {
         return console.log(res);
     };
     
-    return solveNQueens(n);
+    return console.log(solveNQueens(n), 'soy');
 
 }
-export default FunctionEigthQueens;
+
+FunctionEigthQueens(8);
+// export default FunctionEigthQueens;
 

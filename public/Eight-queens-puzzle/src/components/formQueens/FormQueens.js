@@ -1,14 +1,18 @@
-import GetSolutionQueens from '../../lib/GetSolutionQueens'
+import { useState } from 'react';
+// import GetSolutionQueens from '../../lib/GetSolutionQueens';
+import FunctionEigthQueens from '../../FunctionEigthQueens';
 import './formQueens.css';
 
 const FormQueens = () => {
+    const [input, setInput] = useState('');
+    FunctionEigthQueens(input)
     return(
         <>
             <form className='container-form'>
                 <label>
-                    <input type='number' className='container-form__input' id='id-container-form__input'/>
+                    <input type='number' className='container-form__input' value={input} onInput={e=> setInput(e.target.value)} />
                 </label>
-                <button className='container-form__button' onClick={GetSolutionQueens}>Resolve</button>
+                <button className='container-form__button' onClick={FunctionEigthQueens}>Resolve</button>
             </form>
         </>
     )
