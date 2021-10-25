@@ -1,4 +1,3 @@
-const express = require('express');
 const solutionQueens = require('../components/queen/network');
 
 const routes = function (server) {

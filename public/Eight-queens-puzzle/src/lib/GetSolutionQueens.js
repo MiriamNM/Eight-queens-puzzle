@@ -1,28 +1,33 @@
 import React, { useEffect, useState } from "react";
 
-const GetSolutionQueens = ({data}) => {
-	console.log(data)
+const GetSolutionQueens = () => {
 	const [solutionQueen, setSolutionQueen] = useState();
+	
 	const GetsolutionQueens = async()=> {
-		let url = 'http://localhost:4000/solutionQueens';
-		let getFetchData = await fetch(url).then((result) => result.json());
-		setSolutionQueen(getFetchData);
+		const url = 'http://localhost:4000/solutionQueens';
+		const response = await fetch(url,{
+			method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify()
+		});
+		const dataResult = await response.json();
+		const arr = dataResult.body;
+		setSolutionQueen(arr);
 	}
+
 	useEffect(() => {
 		GetsolutionQueens();
 	}, []);
-
+	console.log(solutionQueen)
     return(
 		<div>
-			{solutionQueen &&
-				solutionQueen.map((result)=>{
-					console.log(result.solutionQueens)
-                    return(
-                        <div className="container-Result">
-                            <p>{result.solutionQueens}</p>
-                        </div>
-                    )
-                    })}
+			{solutionQueen.map((result)=>
+				<div className="container-Result">
+					<p>{result.solutionQueens}</p>
+				</div>
+			)}
 		</div>
 	)
 }
